@@ -1,0 +1,13 @@
+__pycache__/
+.venv/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+.streamlit/*
+!.streamlit/config.toml
+eca_demo.db
+eca_demo_large.db
+synthetic_data_requests/
+import_report.json
+round_trip_report.json
+.streamlit/secrets.toml

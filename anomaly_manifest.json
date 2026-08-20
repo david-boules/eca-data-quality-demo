@@ -1,0 +1,177 @@
+{
+  "source_database": "eca_demo.db",
+  "output_database": "eca_demo_anomaly.db",
+  "source_sha256_before": "6309fedc19abac0ec6f396280483f5211cc0be179be1c8c5d89ce8dd54fcb05a",
+  "source_sha256_after": "6309fedc19abac0ec6f396280483f5211cc0be179be1c8c5d89ce8dd54fcb05a",
+  "anomalies": [
+    {
+      "anomaly_type": "extreme sales unit price",
+      "table": "sales",
+      "record_business_key": {
+        "sale_id": 50
+      },
+      "field": "sale_price_excluding_tax_and_discounts",
+      "original_value": 379.04,
+      "modified_value": 379041.0,
+      "expected_detector": "statistical_review_flag"
+    },
+    {
+      "anomaly_type": "extreme sales quantity",
+      "table": "sales",
+      "record_business_key": {
+        "sale_id": 52
+      },
+      "field": "sales_quantity",
+      "original_value": 1038,
+      "modified_value": 1038001.0,
+      "expected_detector": "statistical_review_flag"
+    },
+    {
+      "anomaly_type": "extreme import CIF price",
+      "table": "imports",
+      "record_business_key": {
+        "import_id": 5
+      },
+      "field": "cif_import_price",
+      "original_value": 521.39,
+      "modified_value": 521391.0,
+      "expected_detector": "statistical_review_flag"
+    },
+    {
+      "anomaly_type": "extreme local-purchase price",
+      "table": "purchases",
+      "record_business_key": {
+        "purchase_id": 91
+      },
+      "field": "price_excluding_tax_and_discounts",
+      "original_value": 401.56,
+      "modified_value": 401561.0,
+      "expected_detector": "statistical_review_flag"
+    },
+    {
+      "anomaly_type": "incorrect sales calculated value",
+      "table": "sales",
+      "record_business_key": {
+        "sale_id": 1
+      },
+      "field": "sales_value_excluding_tax_and_discounts",
+      "original_value": 5933.76,
+      "modified_value": 18279.43,
+      "expected_detector": "arithmetic_consistency"
+    },
+    {
+      "anomaly_type": "incorrect purchase calculated value",
+      "table": "purchases",
+      "record_business_key": {
+        "purchase_id": 1
+      },
+      "field": "purchase_value_excluding_tax_and_discounts",
+      "original_value": 412734.34,
+      "modified_value": 425080.01,
+      "expected_detector": "arithmetic_consistency"
+    },
+    {
+      "anomaly_type": "incorrect import calculated value",
+      "table": "imports",
+      "record_business_key": {
+        "import_id": 1
+      },
+      "field": "purchase_value",
+      "original_value": 1448519.08,
+      "modified_value": 1460864.75,
+      "expected_detector": "arithmetic_consistency"
+    },
+    {
+      "anomaly_type": "incorrect fixed-cost total",
+      "table": "costs",
+      "record_business_key": {
+        "cost_id": 1
+      },
+      "field": "total_fixed_cost",
+      "original_value": 38992.64,
+      "modified_value": 51338.31,
+      "expected_detector": "arithmetic_consistency"
+    },
+    {
+      "anomaly_type": "incorrect variable-cost total",
+      "table": "costs",
+      "record_business_key": {
+        "cost_id": 2
+      },
+      "field": "total_variable_cost",
+      "original_value": 119978.28,
+      "modified_value": 132323.95,
+      "expected_detector": "arithmetic_consistency"
+    },
+    {
+      "anomaly_type": "incorrect total production cost",
+      "table": "costs",
+      "record_business_key": {
+        "cost_id": 3
+      },
+      "field": "total_production_cost",
+      "original_value": 205537.65,
+      "modified_value": 217883.32,
+      "expected_detector": "arithmetic_consistency"
+    },
+    {
+      "anomaly_type": "incorrect tender calculated value",
+      "table": "tender_items",
+      "record_business_key": {
+        "tender_item_id": 1
+      },
+      "field": "sales_value_excluding_tax",
+      "original_value": 2628370.47,
+      "modified_value": 2640716.14,
+      "expected_detector": "arithmetic_consistency"
+    },
+    {
+      "anomaly_type": "incorrect export calculated value",
+      "table": "exports",
+      "record_business_key": {
+        "export_id": 1
+      },
+      "field": "export_value_excluding_tax",
+      "original_value": 612634.72,
+      "modified_value": 624980.39,
+      "expected_detector": "arithmetic_consistency"
+    }
+  ],
+  "comparison_support_records": [
+    {
+      "table": "imports",
+      "record_business_key": {
+        "import_id": 128
+      },
+      "purpose": "comparison support for extreme import CIF price"
+    },
+    {
+      "table": "imports",
+      "record_business_key": {
+        "import_id": 129
+      },
+      "purpose": "comparison support for extreme import CIF price"
+    },
+    {
+      "table": "imports",
+      "record_business_key": {
+        "import_id": 130
+      },
+      "purpose": "comparison support for extreme import CIF price"
+    },
+    {
+      "table": "imports",
+      "record_business_key": {
+        "import_id": 131
+      },
+      "purpose": "comparison support for extreme import CIF price"
+    },
+    {
+      "table": "purchases",
+      "record_business_key": {
+        "purchase_id": 529
+      },
+      "purpose": "comparison support for extreme local-purchase price"
+    }
+  ]
+}
